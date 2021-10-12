@@ -1,25 +1,25 @@
-let BtnInicio = document.querySelector(".BtnInicio");
-let BtnCliente = document.querySelector(".BtnClientes");
-let BtnProdutos = document.querySelector(".BtnProdutos");
+let BtnInicio = document.getElementsByClassName(".BtnInicio");
+let BtnCadCliente = document.getElementsByClassName(".BtnCadClientes");
+let BtnListaCliente = document.getElementsByClassName(".BtnListaClientes");
 
-const TelaClientes = document.getElementById("Clientes");
-const TelaInicio = document.getElementById("Inicio");
-const TelaProdutos = document.getElementById("Produtos");
+const TelaInicio = document.getElementById("inicio");
+const TelaCadClientes = document.getElementById("cadcliente");
+const TelaListaClientes = document.getElementById("listacliente");
 
-BtnCliente.onclick = function(){
-    TelaClientes.style.display = "block";
-    TelaInicio.style.display = "none";
-    TelaProdutos.style.display = "none";
+function openCadCliente(){
+  TelaCadClientes.style.display="block";
+  TelaListaClientes.style.display="none";
+  TelaInicio.style.display="none";
 }
 
-BtnInicio.onclick = function(){
-  TelaClientes.style.display = "none";
-  TelaInicio.style.display = "flex";
-  TelaProdutos.style.display = "none";
+function openInicio(){
+  TelaInicio.style.display="block";
+  TelaCadClientes.style.display="none";
+  TelaListaClientes.style.display="none";
 }
 
-BtnProdutos.onclick = function(){
-  TelaClientes.style.display = "none";
-  TelaInicio.style.display = "none";
-  TelaProdutos.style.display = "block";
+function openListaCliente(){
+  TelaListaClientes.style.display="block";
+  TelaCadClientes.style.display="none";
+  TelaInicio.style.display="none";
 }

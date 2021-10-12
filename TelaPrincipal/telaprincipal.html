@@ -1,76 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./TelaPrincipal.css" />
-    <link rel="stylesheet" href="../Clientes/css/clientes.css">
-    <title>Sistema ERP</title>
-  </head>
-
-  <body>
-    <header>
-      <nav>
-        <span class="logo">Sistema ERP</span>
-        <ul class="nav-list">
-          <li><a href="#" class="BtnInicio">Início</a></li>
-          <li><a href="#" class="BtnClientes">Clientes</a></li>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Sistema ERP:: Inicio</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../Clientes/css/listagens.css">
+</head>
+<body>
+  <div class="wrapper">
+    <nav>
+      <input type="checkbox" id="show-search">
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><span class="textoLogo">MDSystem</span></div>
+        <ul class="links">
+          <li><a href="#" class="BtnInicio" onclick="openInicio()">Inicio</a></li>
+          <li>
+            <a href="#" class="desktop-link">Clientes</a>
+            <input type="checkbox" id="show-features">
+            <label for="show-features">Clientes</label>
+            <ul>
+              <li><a href="#" class="BtnCadClientes" onclick="openCadCliente()">Cadastrar</a></li>
+              <li><a href="#" class="BtnListaClientes" onclick="openListaCliente()">Listar</a></li>
+            </ul>
+          </li>
         </ul>
-      </nav>
-    </header>
-
-    <div class="tela_inicio" id="Inicio">
-      <div class="img-wrapper">
-        <img src="./bg.jpg" alt="">
       </div>
-      <div class="banner">
-        <h1>SISTEMA DE GESTÃO EMPRESARIAL</h1>
-        <p> Copyright &copy; Marcos VHD</p>
-        <button>Saiba mais</button>
-      </div>
-    </div>
-    
-    <div class="tela_clientes" id="Clientes">
-      <main>
-        <button type="button" class="button blue mobile" id="cadastrarCliente">Cadastrar Cliente</button>
-        <table id="tableClient" class="records">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>E-mail</th>
-                    <th>Celular</th>
-                    <th>Cidade</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-            <tbody>
+      </form>
+    </nav>
+  </div>
   
-            </tbody>
-        </table>
-        <div class="modal" id="modalCliente">
-            <div class="modal-content">
-                <header class="modal-header">
-                    <h2>Novo Cliente</h2>
-                    <span class="modal-close" id="modalClienteClose">&#10006;</span>
-                </header>
-                <form id="formCliente" class="modal-form">
-                    <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Cliente"
-                        required>
-                    <input type="email" id="email" class="modal-field" placeholder="e-mail do Cliente" required>
-                    <input type="text" id="celular" class="modal-field" placeholder="Celular do Cliente" required>
-                    <input type="text" id="cidade" class="modal-field" placeholder="Cidade do Cliente" required>
-                </form>
-                <footer class="modal-footer">
-                    <button id="salvar" class="button green">Salvar</button>
-                    <button id="cancelar" class="button red">Cancelar</button>
-                </footer>
-            </div>
-        </div>
-      </main>
+  <div class="tela_inicio" id="inicio">
+    <div class="img-wrapper">
+      <img src="./bg.jpg" alt="">
     </div>
+    <div class="banner">
+      <h1>SISTEMA DE GESTÃO EMPRESARIAL</h1>
+      <p> Copyright &copy; Marcos VHD</p>
+      <button>Saiba mais</button>
+    </div>
+  </div>
 
-    <script src="../Clientes/js/clientes.js" defer></script>
-    <script src="./principal.js" defer></script>
-  </body>
+  <div class="tela_cadastro_clientes" id="cadcliente">
+    <main>
+      <header class="modal-header">
+        <h2>Novo Cliente</h2>
+      </header>
+      <form id="formCliente" class="modal-form">
+        <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Cliente" required>
+        <input type="email" id="email" class="modal-field" placeholder="e-mail do Cliente" required>
+        <input type="text" id="celular" class="modal-field" placeholder="Celular do Cliente" required>
+        <input type="text" id="cidade" class="modal-field" placeholder="Cidade do Cliente" required>
+      </form>
+      <footer class="modal-footer">
+        <button id="salvar" class="button green">Salvar</button>
+      </footer>
+    </main>
+  </div>
+
+  <div class="tela_lista_clientes" id="listacliente">
+    <main>
+      <table id="tableClient" class="records">
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>E-mail</th>
+                <th>Celular</th>
+                <th>Cidade</th>
+                <th>Ação</th>
+            </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+    </main>
+  </div>
+
+  <script src="../TelaPrincipal/principal.js"></script>
+  <script src="../Clientes/js/clientes.js"></script>
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
 </html>
