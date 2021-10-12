@@ -1,71 +1,31 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Login:: Entrar</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="form-section">
+      <h1>Acesso ao sistema</h1>
 
-<head>
-	<title>Tela de Login - Tutorial Coffee Tag</title>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="./style.css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700,800&display=swap" rel="stylesheet">
-</head>
-
-<body>
-
-  <div class="cont">
-    <div class="form sign-in">
-      <h2> Entrar </h2>
-      <label>
-        <span>Seu Email</span>
-        <input type="email" name="email">
-      </label>
-      <label>
-        <span>Senha</span>
-        <input type="password" name="password">
-      </label>
-        <button class="submit" type="button">Login</button>
-      <p class="forgot-pass">Esqueceu sua senha?</p>
-    </div>
-
-    <div class="sub-cont">
-      <div class="img">
-        <div class="img-text m-up">
-          <h2>Gostaria de Cadastrar?</h2>
-          <p>Cadastre-se para ter acesso ao sistema</p>
-        </div>
-        <div class="img-text m-in">
-          <h2>Já se Cadastrou?</h2>
-          <p>Se você já tem uma conta, faça o login clicando no botão abaixo</p>
-        </div>
-        <div class="img-btn">
-          <span class="m-up">Cadastrar</span>
-          <span class="m-in">Logar</span>
-        </div>
+      <div class="form-wrapper">
+        <form>
+          <div class="input-block">
+            <label for="login-email">E-mail</label>
+            <input type="email" id="login-email" />
+          </div>
+          <div class="input-block">
+            <label for="login-password">Senha</label>
+            <input type="password" id="login-password" />
+          </div>
+          <button type="submit" class="btn-login" onclick="logar()">Login</button>
+        </form>
       </div>
-      <div class="form sign-up">
-        <h2>Cadastrar-se</h2>
-        <label>
-          <span>Seu nome</span>
-          <input type="text" name="cadname">
-        </label>
-        <label>
-          <span>Seu Email</span>
-          <input type="email" name="cademail">
-        </label>
-        <label>
-          <span>Senha</span>
-          <input type="password" name="cadpassword">
-        </label>
-        <label>
-          <span>Confrmar senha</span>
-          <input type="password" name="cadconfirmpassword">
-        </label>
-        <button type="button" class="submit">Cadastrar</button>
-      </div>
-    </div>
-  </div>
-
-<script type="text/javascript" src="./script.js"></script>
-
-</body>
-
+    </section>
+    <ul class="squares"></ul>
+    <script src="script.js"></script>
+  </body>
 </html>

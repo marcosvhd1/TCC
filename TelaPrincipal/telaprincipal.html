@@ -5,10 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./TelaPrincipal.css" />
-    <link rel="stylesheet" href="../Clientes/css/button.css">
-    <link rel="stylesheet" href="../Clientes/css/main.css">
-    <link rel="stylesheet" href="../Clientes/css/modal.css">
-    <link rel="stylesheet" href="../Clientes/css/records.css">
+    <link rel="stylesheet" href="../Clientes/css/clientes.css">
     <title>Sistema ERP</title>
   </head>
 
@@ -51,13 +48,13 @@
   
             </tbody>
         </table>
-        <div class="modal" id="modal">
+        <div class="modal" id="modalCliente">
             <div class="modal-content">
                 <header class="modal-header">
                     <h2>Novo Cliente</h2>
-                    <span class="modal-close" id="modalClose">&#10006;</span>
+                    <span class="modal-close" id="modalClienteClose">&#10006;</span>
                 </header>
-                <form id="form" class="modal-form">
+                <form id="formCliente" class="modal-form">
                     <input type="text" id="nome" data-index="new" class="modal-field" placeholder="Nome do Cliente"
                         required>
                     <input type="email" id="email" class="modal-field" placeholder="e-mail do Cliente" required>
@@ -73,7 +70,7 @@
       </main>
     </div>
 
-    <script src="../Clientes/js/main.js" defer></script>
+    <script src="../Clientes/js/clientes.js" defer></script>
     <script src="./principal.js" defer></script>
   </body>
 </html>
