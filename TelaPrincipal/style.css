@@ -83,33 +83,7 @@ nav .content .links{
   opacity: 1;
   pointer-events: auto;
 }
-.search-box input{
-  width: 100%;
-  height: 100%;
-  border: none;
-  outline: none;
-  font-size: 17px;
-  color: #fff;
-  background: #171c24;
-  padding: 0 100px 0 15px;
-}
-.search-box input::placeholder{
-  color: #f2f2f2;
-}
-.search-box .go-icon{
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  line-height: 60px;
-  width: 70px;
-  background: #171c24;
-  border: none;
-  outline: none;
-  color: #fff;
-  font-size: 20px;
-  cursor: pointer;
-}
+
 .wrapper input[type="checkbox"]{
   display: none;
 }
@@ -250,6 +224,8 @@ nav .content .links{
   }
 }
 
+/* ******************************************* FIM CSS BARRA LATERAL ******************************************* */
+
 .textoLogo{
   color: #fff;
   font-size: 25px;
@@ -338,3 +314,287 @@ nav .content .links{
     opacity: 1;
   }
 }
+
+/* ******************************************* FIM CSS TELA INICIAL ******************************************* */
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+}
+
+:root{
+  --primary-color: #23232e;
+  --secundary-color: #FFF1CC;
+  --shadow-color: #CCC;
+  --text-color: #FFF;
+}
+
+body{
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  position:relative;
+  background-color: #e5e2e2;
+}
+
+header{
+  background-color: var(--primary-color);
+  height: 70px;
+  text-align: center;
+  line-height: 70px;
+  box-shadow: 0 1px 2px var(--shadow-color);
+}
+
+.header-title{
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin: 5vh auto;
+  padding: 40px;
+  box-shadow: 2px 2px 10px var(--shadow-color);
+  gap: 20px;
+  margin-top: 90px;
+}
+
+footer{
+  width:100;
+  text-align: center;
+  font-weight: 200;
+  font-style: italic;
+  padding: 20px;
+}
+
+@media (max-width:480px){
+  header{
+      position:fixed;
+      width:100%;
+  }
+  .header-title{
+      font-size: 1.5rem;
+  }
+
+  main {
+      padding: 0;
+      margin: 20px 0 0 0;
+      width:100%;
+      box-shadow: none;
+  }
+}
+
+.button{
+  border-style: none;
+  height: 35px;
+  padding: 6px 12px;
+  background-color: black;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+  transition: box-shadow .6s ease;
+}
+
+.button.blue{
+  background-color: #1FB6FF;
+}
+
+button.green{
+  background-color: #13CE66;
+}
+
+button.red{
+  background-color: #FF4949;
+}
+
+.button:hover{
+  box-shadow: inset 200px 0 0 #00000055;
+}
+
+@media(max-width:480px){
+  .button.mobile{
+      color:transparent;
+      font-size:0;
+      width:50px;
+      height:50px;
+      border-radius: 50%;
+      position:fixed;
+      top: 90vh;
+      left: 80vw;
+  }
+  .button.mobile::before{
+      content: "+";
+      color:black;
+      font-size:2rem;
+      width:100%;
+      height:100%;
+  }
+}
+
+.modal{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  height: 100%;
+  background: #00000090;
+  opacity: 0;
+  z-index: -1;
+}
+
+.modal.active{
+  opacity: 1;
+  z-index: 1;
+}
+
+.modal-content{
+  display: flex;
+  flex-direction: column;
+  gap:20px;
+  width: 50vw;
+  margin: 15vh auto;
+  padding-bottom: 20px;
+  background-color: white;
+  box-shadow: 1px 1px 10px black;
+}
+
+.modal-header{
+  position: relative;
+  height: 40px;
+  width: 100%;
+  line-height: 40px;
+  font-size: 0.8rem;
+  color: #fff;
+  z-index: -1;
+}
+.modal-form{
+  position: relative;
+  z-index: 0;
+  flex-direction: row;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.modal-field{
+  width: calc(50% - 10px);
+  height: 40px;
+  outline-style: none;
+  border-style: none;
+  box-shadow: 0 0 2px black;
+  padding: 0 10px;
+  font-size:1rem;
+}
+
+.modal-field:focus{
+  border: 2px solid var(--primary-color);
+  box-shadow: 0 0 3px var(--primary-color);
+}
+
+
+.modal-footer{
+  position: relative;
+  background-color: inherit;
+  top: 15px;
+  padding: 0 20px;
+}
+
+@media (max-width:480px){
+  .modal{
+      top:100%;
+      transition: all 1s ease;
+  }
+  .modal.active{
+      top:0;
+  }
+  .modal-content{
+      margin:0;
+      width:100%;
+      position:fixed;
+  }
+  .modal-field{
+      width:100%;
+  }
+}
+
+.records{
+  width: 100%;
+  user-select: none;
+  text-align: left;
+}
+
+.records th{
+  height: 30px;
+  background-color: var(--primary-color);
+  font-family: system-ui, -apple-system, Helvetica, Arial, sans-serif;
+  padding-left: 20px;
+  font-size: 15px;    
+  color: #fff;
+}
+.records td{
+  height: 50px;
+  padding-left: 20px;
+}
+
+.records th:last-child,
+.records td:last-child{
+  padding: 0;
+  min-width: 140px;
+  text-align: center;
+}
+
+.records tr:hover{
+  background-color: rgb(179, 202, 209);
+  
+}
+
+@media(max-width:480px){
+  .records{
+      border-spacing: 5px;
+  }
+  .records thead{
+      display:none;
+  }
+  .records tr{
+      box-shadow: 0 1px 3px var(--shadow-color);
+  }
+  .records td:not(:first-child){
+      display:flex;
+      justify-content: space-between;
+      padding: 0 20px;
+  }
+
+  .records td{
+      margin:10px 0;
+  }
+
+  .records tr:hover{
+      background-color: inherit;
+  }
+}
+
+.tela_cadastro_clientes{
+  display: none;
+}
+.tela_lista_clientes{
+  display: none;
+}
+
+.tela_cadastro_produtos{
+  display: none;
+}
+.tela_lista_produtos{
+  display: none;
+}
+
+/* ******************************************* FIM CSS TELAS DE CADASTRO E LISTAGEM DE CLIENTE E PRODUTO ******************************************* */
