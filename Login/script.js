@@ -19,7 +19,7 @@ btnLogin.addEventListener("click", event => {
     });
 
   } else {
-    window.location.href="../TelaPrincipal/telaprincipal.html";
+    window.location.href="../Dashboard/principal.html";
     form.classList.add("form-hide");
   }
 });

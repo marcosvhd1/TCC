@@ -1,0 +1,211 @@
+<!Doctype HTML>
+<html>
+
+<head>
+	<title>MDSystem</title>
+	<link rel="stylesheet" href="../Dashboard/css/style.css" type="text/css" />
+	<link rel="stylesheet" href="../Clientes/style.css" type="text/css">
+	<link rel="stylesheet" href="../Produtos/style.css" type="text/css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+	<div id="mySidenav" class="sidenav">
+		<p class="logo">MDSystem</p>
+		<a href="#" class="icon-a" onclick="openInicio()"><i class="fa fa-dashboard icons"></i>
+			&nbsp;&nbsp;Dashboard</a>
+		<a href="#" class="icon-a" onclick="openCliente()"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Clientes</a>
+		<a href="#" class="icon-a" onclick="openProduto()"><i class="fa fa-list icons"></i> &nbsp;&nbsp;Produtos</a>
+		<a href="#" class="icon-a"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;Vendas</a>
+		<a href="#" class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Usuários</a>
+	</div>
+	<div id="main">
+		<div class="head">
+			<div class="col-div-6">
+				<span style="font-size:25px;cursor:pointer; color: white;" class="nav">&#9776; Menu</span>
+				<span style="font-size:25px;cursor:pointer; color: white;" class="nav2">&#9776; Menu</span>
+			</div>
+			<div class="col-div-6">
+				<div class="profile">
+					<img src="../Dashboard/images/user.png" class="pro-img" />
+					<p>Marcos<span>Desenvolvedor</span></p>
+				</div>
+			</div>
+		</div>
+		<div class="tela_inicio" id="Inicio">
+			<div class="clearfix"></div>
+			<br />
+
+			<div class="col-div-3">
+				<div class="box">
+					<p>67<br /><span>Clientes</span></p>
+					<i class="fa fa-users box-icon"></i>
+				</div>
+			</div>
+			<div class="col-div-3">
+				<div class="box">
+					<p>88<br /><span>Produtos</span></p>
+					<i class="fa fa-list box-icon"></i>
+				</div>
+			</div>
+			<div class="col-div-3">
+				<div class="box">
+					<p>99<br /><span>Vendas</span></p>
+					<i class="fa fa-shopping-bag box-icon"></i>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+			<br /><br />
+			<div class="col-div-8">
+				<div class="box-8">
+					<div class="content-box">
+						<p>Últimas Vendas Realizadas<span>Ver Todas</span></p>
+						<br />
+						<table>
+							<tr>
+								<th>Número Da Venda </th>
+								<th>Cliente</th>
+								<th>Valor Total</th>
+							</tr>
+							<tr>
+								<td>00559</td>
+								<td>Marcos Vinicius Hellmann</td>
+								<td>R$1.250,00</td>
+							</tr>
+						</table>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-div-4">
+				<div class="box-4">
+					<div class="content-box">
+						<p>Gráfico<span>Ver Todas</span></p>
+
+						<div class="circle-wrap">
+							<div class="circle">
+								<div class="mask full">
+									<div class="fill"></div>
+								</div>
+								<div class="mask half">
+									<div class="fill"></div>
+								</div>
+								<div class="inside-circle"> 70% </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="tela_clientes" id="Cliente">
+			<h2>Clientes</h2>
+			<div class="clearfix">
+				<div class="botoes">
+					<a href="#">Cadastrar</a>
+					<a href="#">Editar</a>
+					<a href="#">Excluir</a>
+				</div>
+				<br>
+				<table>
+					<thead>
+						<tr>
+							<th>Código</th>
+							<th>Nome</th>
+							<th>Telefone</th>
+							<th>Cidade</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>00001</td>
+							<td>Marcos Vinicius Hellmann Delfino</td>
+							<td>(48) 99635-1582</td>
+							<td>Armazém</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<div class="tela_produtos" id="Produtos">
+			<h2>Produtos</h2>
+			<div class="clearfix">
+				<div class="botoes">
+					<a href="#">Cadastrar</a>
+					<a href="#">Editar</a>
+					<a href="#">Excluir</a>
+				</div>
+				<br>
+				<table>
+					<thead>
+						<tr>
+							<th>Código</th>
+							<th>Descrição</th>
+							<th>Estoque</th>
+							<th>Marca</th>
+							<th>Valor</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>00001</td>
+							<td>Macarrão</td>
+							<td>200</td>
+							<td>Massas Boas</td>
+							<td>R$25,00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script>
+		$(".nav").click(function () {
+			$("#mySidenav").css('width', '70px');
+			$("#main").css('margin-left', '70px');
+			$(".logo").css('visibility', 'hidden');
+			$(".logo span").css('visibility', 'visible');
+			$(".logo span").css('margin-left', '-10px');
+			$(".icon-a").css('visibility', 'hidden');
+			$(".icons").css('visibility', 'visible');
+			$(".icons").css('margin-left', '-8px');
+			$(".nav").css('display', 'none');
+			$(".nav2").css('display', 'block');
+		});
+
+		$(".nav2").click(function () {
+			$("#mySidenav").css('width', '300px');
+			$("#main").css('margin-left', '300px');
+			$(".logo").css('visibility', 'visible');
+			$(".icon-a").css('visibility', 'visible');
+			$(".icons").css('visibility', 'visible');
+			$(".nav").css('display', 'block');
+			$(".nav2").css('display', 'none');
+		});
+
+		const TelaInicio = document.getElementById("Inicio");
+		const TelaCliente = document.getElementById("Cliente");
+		const TelaProduto = document.getElementById("Produtos");
+
+		function openInicio() {
+			TelaInicio.style.display = "block";
+			TelaCliente.style.display = "none";
+			TelaProduto.style.display = "none";
+		}
+
+		function openCliente() {
+			TelaCliente.style.display = "block";
+			TelaInicio.style.display = "none";
+			TelaProduto.style.display = "none";
+		}
+
+		function openProduto() {
+			TelaProduto.style.display = "block";
+			TelaCliente.style.display = "none";
+			TelaInicio.style.display = "none";
+		}
+
+	</script>
+</body>
+
+</html>
