@@ -23,10 +23,6 @@ h2 {
   margin-bottom: 30px;
 }
 
-.logo span {
-  color: #f7403b;
-}
-
 .sidenav {
   height: 100%;
   width: 300px;
@@ -44,13 +40,12 @@ h2 {
   padding: 15px 8px 15px 32px;
   text-decoration: none;
   font-size: 20px;
-  color: #818181;
+  color: #f1f1f1;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover {
-  color: #f1f1f1;
   background-color: #1b203d;
 }
 
