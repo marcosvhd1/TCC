@@ -16,3 +16,21 @@
     color: #f1f1f1;
     background-color: #313863;
 }
+
+.tela_clientes .botoes a i{
+    margin-right: 10px;
+}
+
+#tabelaCliente tr td{
+    cursor: pointer; /**importante para não mostrar cursor de texto**/
+  }
+  
+  /**Cor quando passar por cima**/
+  #tabelaCliente td:hover{
+    background-color: #3e3769;
+  }
+  
+  /**Cor quando selecionado**/
+  #tabelaCliente tr.selecionado td{
+    background-color: #3e3769;
+  }
