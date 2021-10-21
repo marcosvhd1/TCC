@@ -101,10 +101,10 @@
 			<h2>Clientes</h2>
 			<div class="clearfix">
 				<div class="botoes">
-					<a href="#"><i class="fa fa-plus" aria-hidden="true"></i>Cadastrar</a>
-					<a href="#"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</a>
-					<a href="#"><i class="fa fa-trash" aria-hidden="true"></i>Excluir</a>
-					<a href="#" id="dadosCliente">Visualizar Dados</a>
+					<a href="#" id="cadCliente"><i class="fa fa-plus" aria-hidden="true"></i>Cadastrar</a>
+					<a href="#" id="editCliente"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</a>
+					<a href="#" id="excluirCliente"><i class="fa fa-trash" aria-hidden="true"></i>Excluir</a>
+					<!-- <a href="#" id="dadosCliente">Visualizar Dados</a> -->
 				</div>
 				<br>
 				<table id="tabelaCliente">
@@ -112,6 +112,7 @@
 						<tr>
 							<th>Código</th>
 							<th>Nome</th>
+							<th>E-mail</th>
 							<th>Telefone</th>
 							<th>Cidade</th>
 						</tr>
@@ -120,17 +121,51 @@
 						<tr>
 							<td>00001</td>
 							<td>Marcos Vinicius Hellmann Delfino</td>
+							<td>marcosvhd1@gmail.com</td>
 							<td>(48) 99635-1582</td>
 							<td>Armazém</td>
 						</tr>
 						<tr>
 							<td>00002</td>
 							<td>Diego Estevam da Rosa</td>
+							<td>diego@gmail.com</td>
 							<td>(48) 99635-1582</td>
 							<td>Jaguaruna</td>
 						</tr>
 					</tbody>
 				</table>
+			</div>
+			<div id="modal-cliente" class="modal-container">
+				<div class="modal">
+					<button class="fechar" id="fechar-modal-cliente">x</button>
+					<h2 class="subtitulo">Clientes</h2>
+					<form>
+						<li>
+							<ul>
+								<label>Nome:</label>
+								<input type="text" id="nome" class="input" required>
+							</ul>
+							<ul>
+								<label>Telefone:</label>
+								<input type="text" id="telefone" class="input">
+
+							</ul>
+							<ul>
+								<label>E-mail:</label>
+								<input type="text" id="email" class="input">
+							</ul>
+							<ul>
+								<label>Cidade:</label>
+								<input type="text" id="cidade" class="input">
+							</ul>
+							<ul class="botao">
+								<a href="" class="button" id="gravarcliente"><i class="fa fa-check"
+										aria-hidden="true"></i>Gravar</a>
+
+							</ul>
+						</li>
+					</form>
+				</div>
 			</div>
 		</div>
 		<div class="tela_produtos" id="Produtos">
@@ -140,7 +175,6 @@
 					<a href="#"><i class="fa fa-plus" aria-hidden="true"></i>Cadastrar</a>
 					<a href="#"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</a>
 					<a href="#"><i class="fa fa-trash" aria-hidden="true"></i>Excluir</a>
-					<a href="#" id="dadosProduto">Visualizar Dados</a>
 				</div>
 				<br>
 				<table id="tabelaProdutos">
@@ -204,6 +238,7 @@
 		});
 
 	</script>
+
 </body>
 
 </html>

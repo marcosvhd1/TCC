@@ -1,6 +1,24 @@
 var tabela = document.getElementById("tabelaCliente");
 var linhas = tabela.getElementsByTagName("tr");
 
+const cadastrarcliente = document.getElementById("cadCliente");
+const editarcliente = document.getElementById("editCliente");
+
+function iniciamodalCliente(modalID) {
+    const modalcliente = document.getElementById(modalID);
+    if (modalcliente) {
+        modalcliente.classList.add('mostrar');
+        modalcliente.addEventListener('click', (e) => {
+            if (e.target.id == 'fechar-modal-cliente') {
+                modalcliente.classList.remove('mostrar');
+            }
+        });
+    }
+}
+
+cadastrarcliente.addEventListener('click', () => iniciamodalCliente('modal-cliente'));
+editarcliente.addEventListener('click', () => iniciamodalCliente('modal-cliente'));
+
 for (var i = 0; i < linhas.length; i++) {
     var linha = linhas[i];
     linha.addEventListener("click", function () {
@@ -48,3 +66,5 @@ btnCliente.addEventListener("click", function () {
 
     alert(dados);
 });
+
+

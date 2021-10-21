@@ -1,36 +1,142 @@
 .tela_clientes {
-    display: none;
+  display: none;
 }
 
 .tela_clientes .botoes a {
-    text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    color: #f1f1f1;
-    transition: 0.3s;
-    padding: 10px;
-    margin-left: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  transition: 0.3s;
+  padding: 10px;
+  margin-left: 10px;
 }
 
 .tela_clientes .botoes a:hover {
-    color: #f1f1f1;
-    background-color: #313863;
+  color: #f1f1f1;
+  background-color: #313863;
 }
 
-.tela_clientes .botoes a i{
-    margin-right: 10px;
+.tela_clientes .botoes a i {
+  margin-right: 10px;
 }
 
-#tabelaCliente tr td{
-    cursor: pointer; /**importante para não mostrar cursor de texto**/
-  }
-  
-  /**Cor quando passar por cima**/
-  #tabelaCliente td:hover{
-    background-color: #3e3769;
-  }
-  
-  /**Cor quando selecionado**/
-  #tabelaCliente tr.selecionado td{
-    background-color: #3e3769;
-  }
+/* TABELA ************************ */
+
+#tabelaCliente tr td {
+  cursor: pointer;
+  /**importante para não mostrar cursor de texto**/
+}
+
+/**Cor quando passar por cima**/
+
+#tabelaCliente td:hover {
+  background-color: #3e3769;
+}
+
+/**Cor quando selecionado**/
+
+#tabelaCliente tr.selecionado td {
+  background-color: #3e3769;
+}
+
+/* TELA MODAL DE CADASTRO E EDIÇÃO */
+
+.tela_clientes .modal-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.tela_clientes .modal-container.mostrar {
+  display: flex;
+}
+
+.tela_clientes .fechar {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  width: 40px;
+  height: 40px;
+  margin: 3px;
+  border: 1px solid #1b203d;
+  border-radius: 40%;
+  color: white;
+  background: #1b203d;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+}
+
+.tela_clientes .fechar:hover {
+  background: #272e55;
+}
+
+.tela_clientes .subtitulo {
+  color: #1b203d;
+}
+
+.tela_clientes .modal {
+  background: rgb(231, 229, 229);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border: 5px solid #1b203d;
+  box-shadow: 0 0 0 10px rgb(231, 229, 229);
+  position: relative;
+  width: 500px;
+  height: 300px;
+}
+
+.tela_clientes .modal form label {
+  color: #1b203d;
+  font-size: 19px;
+  padding: 5px;
+  font-weight: 700;
+}
+
+.tela_clientes .modal form li {
+  text-decoration: none;
+  font-size: 0px;
+}
+
+.tela_clientes .modal form input {
+  margin: 10px;
+}
+
+.tela_clientes .modal form #nome {
+  width: 300px;
+}
+
+.tela_clientes .modal form ul.botao #gravarcliente {
+  position: absolute;
+  border-radius: 5px;
+  color: white;
+  background: #1b203d;
+  text-decoration: none;
+  border-color: #1b203d;
+  width: 70px;
+  height: 20px;
+  font-size: 15px;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+}
+
+.tela_clientes .modal form ul.botao #gravarcliente:hover {
+  background: #272e55;
+}
+
+.tela_clientes .modal form ul.botao #gravarcliente i {
+  margin-right: 5px;
+  margin-left: 2px;
+}
