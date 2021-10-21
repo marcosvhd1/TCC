@@ -1,6 +1,23 @@
 var tabela2 = document.getElementById("tabelaProdutos");
 var linhas2 = tabela2.getElementsByTagName("tr");
 
+const cadastrarproduto = document.getElementById("cadproduto");
+const editarproduto = document.getElementById("editproduto");
+
+function iniciamodalproduto(modalID) {
+    const modalproduto = document.getElementById(modalID);
+    if (modalproduto) {
+        modalproduto.classList.add('mostrar');
+        modalproduto.addEventListener('click', (e) => {
+            if (e.target.id == 'fechar-modal-produto') {
+                modalproduto.classList.remove('mostrar');
+            }
+        });
+    }
+}
+
+cadastrarproduto.addEventListener('click', () => iniciamodalproduto('modal-produto'));
+
 for (var i = 0; i < linhas2.length; i++) {
     var linha2 = linhas2[i];
     linha2.addEventListener("click", function () {

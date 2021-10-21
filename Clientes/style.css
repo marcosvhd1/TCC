@@ -85,21 +85,19 @@
 
 .tela_clientes .modal {
   background: rgb(231, 229, 229);
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px;
   border: 5px solid #1b203d;
   box-shadow: 0 0 0 10px rgb(231, 229, 229);
   position: relative;
-  width: 500px;
-  height: 300px;
+  width: 630px;
+  height: 220px;
+  animation: modal 0.7s;
 }
 
 .tela_clientes .modal form label {
   color: #1b203d;
   font-size: 19px;
-  padding: 5px;
   font-weight: 700;
+  margin-right: 5px;
 }
 
 .tela_clientes .modal form li {
@@ -107,12 +105,20 @@
   font-size: 0px;
 }
 
-.tela_clientes .modal form input {
-  margin: 10px;
+.tela_clientes .modal form input#nome {
+  width: 250px;
+  margin-right: 25px;
 }
-
-.tela_clientes .modal form #nome {
-  width: 300px;
+.tela_clientes .modal form input#telefone {
+  width: 95px;
+}
+.tela_clientes .modal form input#email {
+  width: 200px;
+  margin-right: 25px;
+  margin-top: 25px;
+}
+.tela_clientes .modal form input#cidade {
+  width: 160px;
 }
 
 .tela_clientes .modal form ul.botao #gravarcliente {
@@ -139,4 +145,14 @@
 .tela_clientes .modal form ul.botao #gravarcliente i {
   margin-right: 5px;
   margin-left: 2px;
+}
+
+@keyframes modal {
+  from{
+    opacity: 0;
+    transform: translateY(-50%);
+  }to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

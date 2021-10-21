@@ -10,13 +10,15 @@
 </head>
 
 <body>
+	<!-- BARRA LATERAL E MENU SUPERIOR -->
 	<div id="mySidenav" class="sidenav">
 		<p class="logo">MDSystem</p>
 		<a href="#" class="icon-a" onclick="openInicio()"><i class="fa fa-dashboard icons"></i>
 			&nbsp;&nbsp;Dashboard</a>
 		<a href="#" class="icon-a" onclick="openCliente()"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Clientes</a>
-		<a href="#" class="icon-a" onclick="openProduto()"><i class="fa fa-list icons"></i> &nbsp;&nbsp;Produtos</a>
+		<a href="#" class="icon-a" onclick="openProduto()"><i class="fa fa-archive icons"></i> &nbsp;&nbsp;Produtos</a>
 		<a href="#" class="icon-a"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;Vendas</a>
+		<a href="#" class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Financeiro</a>
 		<a href="#" class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Usuários</a>
 	</div>
 	<div id="main">
@@ -32,10 +34,10 @@
 				</div>
 			</div>
 		</div>
+		<!-- DASHBOARD -->
 		<div class="tela_inicio" id="Inicio">
 			<div class="clearfix"></div>
 			<br />
-
 			<div class="col-div-3">
 				<div class="box">
 					<p>67<br /><span>Clientes</span></p>
@@ -76,12 +78,10 @@
 					</div>
 				</div>
 			</div>
-
 			<div class="col-div-4">
 				<div class="box-4">
 					<div class="content-box">
 						<p>Gráfico<span>Ver Todas</span></p>
-
 						<div class="circle-wrap">
 							<div class="circle">
 								<div class="mask full">
@@ -97,6 +97,7 @@
 				</div>
 			</div>
 		</div>
+		<!-- TELA CLIENTES -->
 		<div class="tela_clientes" id="Cliente">
 			<h2>Clientes</h2>
 			<div class="clearfix">
@@ -104,7 +105,6 @@
 					<a href="#" id="cadCliente"><i class="fa fa-plus" aria-hidden="true"></i>Cadastrar</a>
 					<a href="#" id="editCliente"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</a>
 					<a href="#" id="excluirCliente"><i class="fa fa-trash" aria-hidden="true"></i>Excluir</a>
-					<!-- <a href="#" id="dadosCliente">Visualizar Dados</a> -->
 				</div>
 				<br>
 				<table id="tabelaCliente">
@@ -135,46 +135,42 @@
 					</tbody>
 				</table>
 			</div>
+			<!-- FORM DE CADASTRO DO CLIENTE -->
 			<div id="modal-cliente" class="modal-container">
 				<div class="modal">
 					<button class="fechar" id="fechar-modal-cliente">x</button>
 					<h2 class="subtitulo">Clientes</h2>
 					<form>
 						<li>
-							<ul>
+							<ul class="fields">
 								<label>Nome:</label>
 								<input type="text" id="nome" class="input" required>
-							</ul>
-							<ul>
 								<label>Telefone:</label>
 								<input type="text" id="telefone" class="input">
-
 							</ul>
-							<ul>
+							<ul class="fields">
 								<label>E-mail:</label>
 								<input type="text" id="email" class="input">
-							</ul>
-							<ul>
 								<label>Cidade:</label>
 								<input type="text" id="cidade" class="input">
 							</ul>
 							<ul class="botao">
-								<a href="" class="button" id="gravarcliente"><i class="fa fa-check"
+								<a href="#" class="button" id="gravarcliente"><i class="fa fa-check"
 										aria-hidden="true"></i>Gravar</a>
-
 							</ul>
 						</li>
 					</form>
 				</div>
 			</div>
 		</div>
+		<!-- TELA DE PRODUTOS -->
 		<div class="tela_produtos" id="Produtos">
 			<h2>Produtos</h2>
 			<div class="clearfix">
 				<div class="botoes">
-					<a href="#"><i class="fa fa-plus" aria-hidden="true"></i>Cadastrar</a>
-					<a href="#"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</a>
-					<a href="#"><i class="fa fa-trash" aria-hidden="true"></i>Excluir</a>
+					<a href="#" id="cadproduto"><i class="fa fa-plus" aria-hidden="true"></i>Cadastrar</a>
+					<a href="#" id="editproduto"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</a>
+					<a href="#" id="excluirproduto"><i class="fa fa-trash" aria-hidden="true"></i>Excluir</a>
 				</div>
 				<br>
 				<table id="tabelaProdutos">
@@ -204,6 +200,33 @@
 						</tr>
 					</tbody>
 				</table>
+			</div>
+			<!-- FORM DE CADASTRO DO PRODUTO -->
+			<div id="modal-produto" class="modal-container">
+				<div class="modal">
+					<button class="fechar" id="fechar-modal-produto">x</button>
+					<h2 class="subtitulo">Produtos</h2>
+					<form>
+						<li>
+							<ul class="fields">
+								<label>Descrição:</label>
+								<input type="text" id="descricao" class="input" required>
+								<label>Estoque:</label>
+								<input type="number" id="estoque" class="input">
+							</ul>
+							<ul class="fields">
+								<label>Marca:</label>
+								<input type="text" id="marca" class="input">
+								<label>Valor:</label>
+								<input type="number" id="valor" class="input">
+							</ul>
+							<ul class="botao">
+								<a href="#" class="button" id="gravarproduto"><i class="fa fa-check"
+										aria-hidden="true"></i>Gravar</a>
+							</ul>
+						</li>
+					</form>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -238,7 +261,6 @@
 		});
 
 	</script>
-
 </body>
 
 </html>

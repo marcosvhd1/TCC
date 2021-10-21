@@ -17,7 +17,7 @@ function iniciamodalCliente(modalID) {
 }
 
 cadastrarcliente.addEventListener('click', () => iniciamodalCliente('modal-cliente'));
-editarcliente.addEventListener('click', () => iniciamodalCliente('modal-cliente'));
+// editarcliente.addEventListener('click', () => iniciamodalCliente('modal-cliente'));
 
 for (var i = 0; i < linhas.length; i++) {
     var linha = linhas[i];
