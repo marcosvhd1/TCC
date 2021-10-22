@@ -1,41 +1,63 @@
 .tela_vendas {
-    display: none;
+  display: none;
 }
 
 .tela_vendas .botoes a {
-    text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    color: #f1f1f1;
-    transition: 0.3s;
-    padding: 10px;
-    margin-left: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  transition: 0.3s;
+  padding: 10px;
+  margin-left: 10px;
 }
 
 .tela_vendas .botoes a:hover {
-    color: #f1f1f1;
-    background-color: #313863;
+  color: #f1f1f1;
+  background-color: #313863;
 }
 
-.tela_vendas .botoes a i{
-    margin-right: 10px;
+.tela_vendas .botoes a i {
+  margin-right: 10px;
 }
 
-#tabelaVendas tr td{
-    cursor: pointer; /**importante para não mostrar cursor de texto**/
-  }
-  
-  /**Cor quando passar por cima**/
-  #tabelaVendas td:hover{
-    background-color: #3e3769;
-  }
-  
-  /**Cor quando selecionado**/
-  #tabelaVendas tr.selecionado td{
-    background-color: #3e3769;
-  }
+#tabelaVendas tr td {
+  cursor: pointer;
+  /**importante para não mostrar cursor de texto**/
+}
 
-  /* TELA MODAL DE CADASTRO E EDIÇÃO */
+/**Cor quando passar por cima**/
+
+#tabelaVendas td:hover {
+  background-color: #3e3769;
+}
+
+/**Cor quando selecionado**/
+
+#tabelaVendas tr.selecionado td {
+  background-color: #3e3769;
+}
+
+
+
+#produtosincluidos tr td {
+  cursor: pointer;
+  /**importante para não mostrar cursor de texto**/
+}
+
+/**Cor quando passar por cima**/
+
+#produtosincluidos td:hover {
+  background-color: #3e3769;
+}
+
+/**Cor quando selecionado**/
+
+#produtosincluidos tr.selecionado td {
+  background-color: #3e3769;
+}
+
+/* TELA MODAL DE CADASTRO E EDIÇÃO */
 
 .tela_vendas .modal-container {
   width: 100%;
@@ -86,8 +108,8 @@
   border: 5px solid #1b203d;
   box-shadow: 0 0 0 10px rgb(231, 229, 229);
   position: relative;
-  width: 580px;
-  height: 480px;
+  width: 680px;
+  height: 450px;
   animation: modal 0.7s;
 }
 
@@ -105,7 +127,7 @@
 
 .tela_vendas button.lupa-vendas {
   color: #1b203d;
-  background:rgb(231, 229, 229);
+  background: rgb(231, 229, 229);
   cursor: pointer;
   border: none;
   width: 30px;
@@ -114,16 +136,16 @@
 
 .tela_vendas button.lupa-vendas:hover {
   color: rgb(231, 229, 229);
-  background:#1b203d;
+  background: #1b203d;
 }
 
 .tela_vendas #separador {
   font-size: 15px;
-  }
+}
 
 .tela_vendas button#incluiproduto {
   border: none;
-  background:rgb(231, 229, 229);
+  background: rgb(231, 229, 229);
   cursor: pointer;
   width: 30px;
   height: 25px;
@@ -131,7 +153,7 @@
 
 .tela_vendas button#incluiproduto:hover {
   color: rgb(231, 229, 229);
-  background:#1b203d;
+  background: #1b203d;
 }
 
 .tela_vendas .modal form ul.botao #gravarvendas {
@@ -151,6 +173,32 @@
   margin: 5px;
 }
 
+.tela_vendas .modal form ul.botao #removeproduto {
+  position: absolute;
+  border-radius: 5px;
+  color: white;
+  background: #1b203d;
+  text-decoration: none;
+  border-color: #1b203d;
+  width: 105px;
+  height: 15px;
+  font-size: 11px;
+  right: 150px;
+  bottom: 40px;
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+}
+
+.tela_vendas .modal form ul.botao #removeproduto i {
+  margin-right: 5px;
+  margin-left: 2px;
+}
+
+.tela_vendas .modal form ul.botao #removeproduto:hover {
+  background: #343c6b;
+}
+
 .tela_vendas .modal form ul.botao #gravarvendas:hover {
   background: #272e55;
 }
@@ -161,44 +209,90 @@
 }
 
 @keyframes modal {
-  from{
+  from {
     opacity: 0;
     transform: translateY(-50%);
-  }to {
+  }
+  to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.tela_vendas .fields{
+.tela_vendas .fields {
   position: relative;
 }
-.tela_vendas .fields #labelcliente{
+
+.tela_vendas .fields #labelcliente {
   position: absolute;
   top: 0;
   left: 0;
 }
-.tela_vendas .fields #labelproduto{
+
+.tela_vendas .fields #labelproduto {
   position: absolute;
   top: 45px;
   left: 0;
 }
-.tela_vendas #status{
+
+.tela_vendas #produto{
+  position: relative;
+  left: -2px;
+  width: 130px;
+}
+
+.tela_vendas #qtd {
+  position: relative;
+  left: -7px;
+  width: 30px;
+}
+
+.tela_vendas #valorun {
+  position: relative;
+  left: -7px;
+  width: 50px;
+}
+
+.tela_vendas #valortot {
+  position: relative;
+  left: -7px;
+  width: 80px;
+}
+
+.tela_vendas #status {
   position: absolute;
   top: 0;
   right: 0;
 }
-.tela_vendas #pgto{
+
+.tela_vendas #pgto {
   position: absolute;
-  bottom: 30px;
+  bottom: 15px;
   left: 15px;
   margin: 5px;
 }
-.tela_vendas #produtosincluidos{
+
+div.scroll {
   position: relative;
-  top: 100px;
+  overflow: auto;
+  top: 85px;
+  width: 100%;
+  height: 240px;
+  border-radius: 5px;
+}
+
+.tela_vendas #produtosincluidos {
+  position: relative;
   background-color: #1b203d;
   border-radius: 5px;
   color: #f1f1f1;
   font-size: 15px;
+}
+
+.tela_vendas #produtosincluidos th{
+  position: sticky;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  background-color: #1b203d;
 }

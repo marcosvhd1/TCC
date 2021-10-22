@@ -16,12 +16,12 @@
 		<p class="logo" style="font-size: 30px;"><i class="fa fa-code" aria-hidden="true"
 				style="margin-right: 11px;"></i>MDSystem</p>
 		<a href="#" class="icon-a" onclick="openInicio()"><i class="fa fa-dashboard icons"></i>
-			&nbsp;&nbsp;Dashboard</a>
-		<a href="#" class="icon-a" onclick="openCliente()"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Clientes</a>
-		<a href="#" class="icon-a" onclick="openProduto()"><i class="fa fa-archive icons"></i> &nbsp;&nbsp;Produtos</a>
-		<a href="#" class="icon-a" onclick="openVenda()"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;Vendas</a>
-		<a href="#" class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Financeiro</a>
-		<a href="#" class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Usuários</a>
+			<span>Dashboard</span>
+		</a>
+		<a href="#" class="icon-a" onclick="openCliente()"><i class="fa fa-users icons"></i> <span>Clientes</span></a>
+		<a href="#" class="icon-a" onclick="openProduto()"><i class="fa fa-archive icons"></i> <span>Produtos</span></a>
+		<a href="#" class="icon-a" onclick="openVenda()"><i class="fa fa-shopping-bag icons"></i>
+			<span>Vendas</span></a>
 	</div>
 	<div id="main">
 		<div class="head">
@@ -246,18 +246,18 @@
 						<tr>
 							<th>Código</th>
 							<th>Cliente</th>
-							<th>Produtos</th>
 							<th>Forma de Pgt.</th>
 							<th>Valor</th>
+							<th>Status</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>00001</td>
 							<td>Marcos Vinicius Hellmann</td>
-							<td>Macarrão</td>
 							<td>Dinheiro</td>
 							<td>R$25,00</td>
+							<td>Faturado</td>
 						</tr>
 					</tbody>
 				</table>
@@ -270,12 +270,12 @@
 					<form>
 						<li>
 							<ul class="fields">
-								<label id="labelcliente">Cliente:
+								<label id="labelcliente" style="font-size: 15px;">Cliente:
 									<input type="text" id="cliente" class="input" readonly>
 									<button class="lupa-vendas"><i class="fa fa-search" aria-hidden="true"></i>
 									</button>
 								</label>
-								<label id="status">Status:
+								<label id="status" style="font-size: 15px;">Status:
 									<select>
 										<option>Faturado</option>
 										<option>Á Faturar</option>
@@ -283,9 +283,16 @@
 								</label>
 							</ul>
 							<ul class="fields">
-								<label id="labelproduto">Produto:
+								<label id="labelproduto" style="font-size: 15px;">Produto:
 									<input type="text" id="produto" class="input" readonly>
-									<button class="lupa-vendas"><i class="fa fa-search" aria-hidden="true"></i>
+									<label style="font-size: 14px;margin-left: 5px;">Qtd:</label>
+									<input type="text" id="qtd" class="input">
+									<label style="font-size: 14px;">Valor UN:</label>
+									<input type="text" id="valorun" class="input">
+									<label style="font-size: 14px;">Total:</label>
+									<input type="text" id="valortot" class="input">
+									<button class="lupa-vendas" style="margin-left: -7px;"><i class="fa fa-search"
+											aria-hidden="true"></i>
 									</button>
 									<a id="separador">l</a>
 									<button class="button" id="incluiproduto"><i class="fa fa-check"
@@ -293,35 +300,86 @@
 									</button>
 								</label>
 							</ul>
-
-							<table id="produtosincluidos">
-								<thead>
-									<tr>
-										<th>Código</th>
-										<th>Produto</th>
-										<th>Quantidade</th>
-										<th>Valor Unitário</th>
-										<th>Valor Total</th>
-									</tr>
-								</thead>
-								<tbody>
-									<tr>
-										<td>00001</td>
-										<td>Macarrão</td>
-										<td>50</td>
-										<td>R$5,00</td>
-										<td>R$250,00</td>
-									</tr>
-								</tbody>
-							</table>
-							<label id="pgto">Forma de Pgto.:
+							<div class="scroll">
+								<table id="produtosincluidos">
+									<thead>
+										<tr>
+											<th>Código</th>
+											<th>Produto</th>
+											<th>Quantidade</th>
+											<th>Valor Unitário</th>
+											<th>Valor Total</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>00001</td>
+											<td>Macarrão</td>
+											<td>50</td>
+											<td>R$5,00</td>
+											<td>R$250,00</td>
+										</tr>
+										<tr>
+											<td>00001</td>
+											<td>Macarrão</td>
+											<td>50</td>
+											<td>R$5,00</td>
+											<td>R$250,00</td>
+										</tr>
+										<tr>
+											<td>00001</td>
+											<td>Macarrão</td>
+											<td>50</td>
+											<td>R$5,00</td>
+											<td>R$250,00</td>
+										</tr>
+										<tr>
+											<td>00001</td>
+											<td>Macarrão</td>
+											<td>50</td>
+											<td>R$5,00</td>
+											<td>R$250,00</td>
+										</tr>
+										<tr>
+											<td>00001</td>
+											<td>Macarrão</td>
+											<td>50</td>
+											<td>R$5,00</td>
+											<td>R$250,00</td>
+										</tr>
+										<tr>
+											<td>00001</td>
+											<td>Macarrão</td>
+											<td>50</td>
+											<td>R$5,00</td>
+											<td>R$250,00</td>
+										</tr>
+										<tr>
+											<td>00001</td>
+											<td>Macarrão</td>
+											<td>50</td>
+											<td>R$5,00</td>
+											<td>R$250,00</td>
+										</tr>
+										<tr>
+											<td>00001</td>
+											<td>Macarrão</td>
+											<td>50</td>
+											<td>R$5,00</td>
+											<td>R$250,00</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+							<label id="pgto" style="font-size: 15px;">Forma de Pgto.:
 								<select>
 									<option>Dinheiro</option>
 									<option>Cartão</option>
 								</select>
 							</label>
-
+							
 							<ul class="botao">
+								<a href="#" class="button" id="removeproduto"><i class="fa fa-times" aria-hidden="true"></i>Remover Produto</a>
 								<a href="#" class="button" id="gravarvendas"><i class="fa fa-check"
 										aria-hidden="true"></i>Gravar</a>
 							</ul>
@@ -350,6 +408,7 @@
 			$(".icons").css('margin-left', '-8px');
 			$(".nav").css('display', 'none');
 			$(".nav2").css('display', 'block');
+			$(".sidenav span").css('color', 'transparent');
 		});
 
 		$(".nav2").click(function () {
@@ -359,6 +418,7 @@
 			$(".icon-a").css('visibility', 'visible');
 			$(".icons").css('visibility', 'visible');
 			$(".nav").css('display', 'block');
+			$(".sidenav span").css('color', 'white');
 			$(".nav2").css('display', 'none');
 		});
 

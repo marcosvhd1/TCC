@@ -241,3 +241,8 @@ td, th {
   font-weight: 700;
   font-size: 2em;
 }
+
+.sidenav span{
+  padding-left: 10px;
+  transition: all 0.5s
+}
