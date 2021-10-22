@@ -189,6 +189,12 @@ td, th {
   border-bottom: 1px solid #81818140;
 }
 
+#main span.seeall{
+  background-color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 .circle-wrap {
   margin: 50px auto;
   width: 150px;
