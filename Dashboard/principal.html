@@ -6,18 +6,20 @@
 	<link rel="stylesheet" href="../Dashboard/style.css" type="text/css" />
 	<link rel="stylesheet" href="../Clientes/style.css" type="text/css">
 	<link rel="stylesheet" href="../Produtos/style.css" type="text/css">
+	<link rel="stylesheet" href="../Vendas/style.css" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
 <body>
 	<!-- BARRA LATERAL E MENU SUPERIOR -->
 	<div id="mySidenav" class="sidenav">
-		<p class="logo">MDSystem</p>
+		<p class="logo" style="font-size: 30px;"><i class="fa fa-code" aria-hidden="true"
+				style="margin-right: 11px;"></i>MDSystem</p>
 		<a href="#" class="icon-a" onclick="openInicio()"><i class="fa fa-dashboard icons"></i>
 			&nbsp;&nbsp;Dashboard</a>
 		<a href="#" class="icon-a" onclick="openCliente()"><i class="fa fa-users icons"></i> &nbsp;&nbsp;Clientes</a>
 		<a href="#" class="icon-a" onclick="openProduto()"><i class="fa fa-archive icons"></i> &nbsp;&nbsp;Produtos</a>
-		<a href="#" class="icon-a"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;Vendas</a>
+		<a href="#" class="icon-a" onclick="openVenda()"><i class="fa fa-shopping-bag icons"></i> &nbsp;&nbsp;Vendas</a>
 		<a href="#" class="icon-a"><i class="fa fa-money icons"></i> &nbsp;&nbsp;Financeiro</a>
 		<a href="#" class="icon-a"><i class="fa fa-user icons"></i> &nbsp;&nbsp;Usuários</a>
 	</div>
@@ -229,11 +231,111 @@
 				</div>
 			</div>
 		</div>
+		<!-- TELA VENDAS -->
+		<div class="tela_vendas" id="Venda">
+			<h2>Vendas</h2>
+			<div class="clearfix">
+				<div class="botoes">
+					<a href="#" id="cadvenda"><i class="fa fa-plus" aria-hidden="true"></i>Cadastrar</a>
+					<a href="#" id="editvenda"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</a>
+					<a href="#" id="excluirvenda"><i class="fa fa-trash" aria-hidden="true"></i>Excluir</a>
+				</div>
+				<br>
+				<table id="tabelaVendas">
+					<thead>
+						<tr>
+							<th>Código</th>
+							<th>Cliente</th>
+							<th>Produtos</th>
+							<th>Forma de Pgt.</th>
+							<th>Valor</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>00001</td>
+							<td>Marcos Vinicius Hellmann</td>
+							<td>Macarrão</td>
+							<td>Dinheiro</td>
+							<td>R$25,00</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- FORM DE CADASTRO DE VENDA -->
+			<div id="modal-venda" class="modal-container">
+				<div class="modal">
+					<button class="fechar" id="fechar-modal-venda">x</button>
+					<h2 class="subtitulo">Pedido de Venda</h2>
+					<form>
+						<li>
+							<ul class="fields">
+								<label id="labelcliente">Cliente:
+									<input type="text" id="cliente" class="input" readonly>
+									<button class="lupa-vendas"><i class="fa fa-search" aria-hidden="true"></i>
+									</button>
+								</label>
+								<label id="status">Status:
+									<select>
+										<option>Faturado</option>
+										<option>Á Faturar</option>
+									</select>
+								</label>
+							</ul>
+							<ul class="fields">
+								<label id="labelproduto">Produto:
+									<input type="text" id="produto" class="input" readonly>
+									<button class="lupa-vendas"><i class="fa fa-search" aria-hidden="true"></i>
+									</button>
+									<a id="separador">l</a>
+									<button class="button" id="incluiproduto"><i class="fa fa-check"
+											aria-hidden="true"></i>
+									</button>
+								</label>
+							</ul>
+
+							<table id="produtosincluidos">
+								<thead>
+									<tr>
+										<th>Código</th>
+										<th>Produto</th>
+										<th>Quantidade</th>
+										<th>Valor Unitário</th>
+										<th>Valor Total</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>00001</td>
+										<td>Macarrão</td>
+										<td>50</td>
+										<td>R$5,00</td>
+										<td>R$250,00</td>
+									</tr>
+								</tbody>
+							</table>
+							<label id="pgto">Forma de Pgto.:
+								<select>
+									<option>Dinheiro</option>
+									<option>Cartão</option>
+								</select>
+							</label>
+
+							<ul class="botao">
+								<a href="#" class="button" id="gravarvendas"><i class="fa fa-check"
+										aria-hidden="true"></i>Gravar</a>
+							</ul>
+						</li>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="../Dashboard/script.js"></script>
 	<script src="../Clientes/script.js"></script>
 	<script src="../Produtos/script.js"></script>
+	<script src="../Vendas/script.js"></script>
 
 	<!-- BARRA LATERAL -->
 	<script>

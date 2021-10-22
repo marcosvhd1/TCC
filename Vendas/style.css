@@ -1,0 +1,204 @@
+.tela_vendas {
+    display: none;
+}
+
+.tela_vendas .botoes a {
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: #f1f1f1;
+    transition: 0.3s;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+.tela_vendas .botoes a:hover {
+    color: #f1f1f1;
+    background-color: #313863;
+}
+
+.tela_vendas .botoes a i{
+    margin-right: 10px;
+}
+
+#tabelaVendas tr td{
+    cursor: pointer; /**importante para não mostrar cursor de texto**/
+  }
+  
+  /**Cor quando passar por cima**/
+  #tabelaVendas td:hover{
+    background-color: #3e3769;
+  }
+  
+  /**Cor quando selecionado**/
+  #tabelaVendas tr.selecionado td{
+    background-color: #3e3769;
+  }
+
+  /* TELA MODAL DE CADASTRO E EDIÇÃO */
+
+.tela_vendas .modal-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.tela_vendas .modal-container.mostrar {
+  display: flex;
+}
+
+.tela_vendas .fechar {
+  position: absolute;
+  top: -25px;
+  right: -25px;
+  width: 40px;
+  height: 40px;
+  margin: 3px;
+  border: 1px solid #1b203d;
+  border-radius: 40%;
+  color: white;
+  background: #1b203d;
+  font-size: 18px;
+  cursor: pointer;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
+}
+
+.tela_vendas .fechar:hover {
+  background: #272e55;
+}
+
+.tela_vendas .subtitulo {
+  color: #1b203d;
+}
+
+.tela_vendas .modal {
+  background: rgb(231, 229, 229);
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
+  border: 5px solid #1b203d;
+  box-shadow: 0 0 0 10px rgb(231, 229, 229);
+  position: relative;
+  width: 580px;
+  height: 480px;
+  animation: modal 0.7s;
+}
+
+.tela_vendas .modal form label {
+  color: #1b203d;
+  font-size: 19px;
+  font-weight: 700;
+  margin-right: 5px;
+}
+
+.tela_vendas .modal form li {
+  text-decoration: none;
+  font-size: 0px;
+}
+
+.tela_vendas button.lupa-vendas {
+  color: #1b203d;
+  background:rgb(231, 229, 229);
+  cursor: pointer;
+  border: none;
+  width: 30px;
+  height: 25px;
+}
+
+.tela_vendas button.lupa-vendas:hover {
+  color: rgb(231, 229, 229);
+  background:#1b203d;
+}
+
+.tela_vendas #separador {
+  font-size: 15px;
+  }
+
+.tela_vendas button#incluiproduto {
+  border: none;
+  background:rgb(231, 229, 229);
+  cursor: pointer;
+  width: 30px;
+  height: 25px;
+}
+
+.tela_vendas button#incluiproduto:hover {
+  color: rgb(231, 229, 229);
+  background:#1b203d;
+}
+
+.tela_vendas .modal form ul.botao #gravarvendas {
+  position: absolute;
+  border-radius: 5px;
+  color: white;
+  background: #1b203d;
+  text-decoration: none;
+  border-color: #1b203d;
+  width: 70px;
+  height: 20px;
+  font-size: 15px;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  padding: 5px;
+  margin: 5px;
+}
+
+.tela_vendas .modal form ul.botao #gravarvendas:hover {
+  background: #272e55;
+}
+
+.tela_vendas .modal form ul.botao #gravarvendas i {
+  margin-right: 5px;
+  margin-left: 2px;
+}
+
+@keyframes modal {
+  from{
+    opacity: 0;
+    transform: translateY(-50%);
+  }to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tela_vendas .fields{
+  position: relative;
+}
+.tela_vendas .fields #labelcliente{
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.tela_vendas .fields #labelproduto{
+  position: absolute;
+  top: 45px;
+  left: 0;
+}
+.tela_vendas #status{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.tela_vendas #pgto{
+  position: absolute;
+  bottom: 30px;
+  left: 15px;
+  margin: 5px;
+}
+.tela_vendas #produtosincluidos{
+  position: relative;
+  top: 100px;
+  background-color: #1b203d;
+  border-radius: 5px;
+  color: #f1f1f1;
+  font-size: 15px;
+}
