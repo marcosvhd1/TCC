@@ -1,6 +1,9 @@
 var tabela3 = document.getElementById("tabelaVendas");
 var linhas3 = tabela3.getElementsByTagName("tr");
 
+var tabela4 = document.getElementById("produtosincluidos");
+var linhas4 = tabela4.getElementsByTagName("tr");
+
 const cadastrarvenda = document.getElementById("cadvenda");
 const editarvenda = document.getElementById("editvenda");
 
@@ -38,24 +41,48 @@ function selLinha(linha3, multiplos) {
     linha3.classList.toggle("selecionado");
 }
 
-var btnvenda = document.getElementById("dadosvenda");
+for (var i = 0; i < linhas4.length; i++) {
+    var linha4 = linhas4[i];
+    linha4.addEventListener("click", function () {
+        //Adicionar ao atual
+        selLinha(this, false); //Selecione apenas um
+        //selLinha(this, true); //Selecione quantos quiser
+    });
+}
 
-btnvenda.addEventListener("click", function () {
-    var selecionados3 = tabela3.getElementsByClassName("selecionado");
-    //Verificar se eestá selecionado
-    if (selecionados3.length < 1) {
-        alert("Selecione pelo menos uma linha");
-        return false;
+function selLinha(linha4, multiplos) {
+    if (!multiplos) {
+        var linhas4 = linha4.parentElement.getElementsByTagName("tr");
+        for (var i = 0; i < linhas4.length; i++) {
+            var linha4_ = linhas4[i];
+            linha4_.classList.remove("selecionado");
+        }
     }
+    linha4.classList.toggle("selecionado");
+}
 
-    var dados3 = "";
 
-    for (var i = 0; i < selecionados3.length; i++) {
-        var selecionado3 = selecionados3[i];
-        selecionado3 = selecionado3.getElementsByTagName("td");
-        dados3 += "Código: " + selecionado3[0].innerHTML + " - Descrição: " + selecionado3[1].innerHTML + " - Estoque: " + selecionado3[3].innerHTML + " - Marca: " + selecionado3[3].innerHTML + " - Valor: " + selecionado3[4].innerHTML + "\n";
-    }
 
-    alert(dados3);
-});
+
+
+
+// var btnvenda = document.getElementById("dadosvenda");
+// btnvenda.addEventListener("click", function () {
+//     var selecionados3 = tabela3.getElementsByClassName("selecionado");
+//     //Verificar se eestá selecionado
+//     if (selecionados3.length < 1) {
+//         alert("Selecione pelo menos uma linha");
+//         return false;
+//     }
+
+//     var dados3 = "";
+
+//     for (var i = 0; i < selecionados3.length; i++) {
+//         var selecionado3 = selecionados3[i];
+//         selecionado3 = selecionado3.getElementsByTagName("td");
+//         dados3 += "Código: " + selecionado3[0].innerHTML + " - Descrição: " + selecionado3[1].innerHTML + " - Estoque: " + selecionado3[3].innerHTML + " - Marca: " + selecionado3[3].innerHTML + " - Valor: " + selecionado3[4].innerHTML + "\n";
+//     }
+
+//     alert(dados3);
+// });
 
