@@ -61,28 +61,3 @@ function selLinha(linha4, multiplos) {
     linha4.classList.toggle("selecionado");
 }
 
-
-
-
-
-
-// var btnvenda = document.getElementById("dadosvenda");
-// btnvenda.addEventListener("click", function () {
-//     var selecionados3 = tabela3.getElementsByClassName("selecionado");
-//     //Verificar se eestá selecionado
-//     if (selecionados3.length < 1) {
-//         alert("Selecione pelo menos uma linha");
-//         return false;
-//     }
-
-//     var dados3 = "";
-
-//     for (var i = 0; i < selecionados3.length; i++) {
-//         var selecionado3 = selecionados3[i];
-//         selecionado3 = selecionado3.getElementsByTagName("td");
-//         dados3 += "Código: " + selecionado3[0].innerHTML + " - Descrição: " + selecionado3[1].innerHTML + " - Estoque: " + selecionado3[3].innerHTML + " - Marca: " + selecionado3[3].innerHTML + " - Valor: " + selecionado3[4].innerHTML + "\n";
-//     }
-
-//     alert(dados3);
-// });
-
