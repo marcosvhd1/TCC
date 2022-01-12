@@ -61,8 +61,8 @@
 
 .tela_clientes .fechar {
   position: absolute;
-  top: -25px;
-  right: -25px;
+  top: -10px;
+  right: -10px;
   width: 40px;
   height: 40px;
   margin: 3px;
@@ -80,21 +80,20 @@
 }
 
 .tela_clientes .subtitulo {
-  color: #1b203d;
+  color: white;
 }
 
 .tela_clientes .modal {
-  background: rgb(231, 229, 229);
-  border: 5px solid #1b203d;
-  box-shadow: 0 0 0 10px rgb(231, 229, 229);
+  background-color: #1b203d;
   position: relative;
   width: 630px;
   height: 220px;
   animation: modal 0.7s;
+  border-radius: 20px;
 }
 
 .tela_clientes .modal form label {
-  color: #1b203d;
+  color: white;
   font-size: 19px;
   font-weight: 700;
   margin-right: 5px;
@@ -103,6 +102,18 @@
 .tela_clientes .modal form li {
   text-decoration: none;
   font-size: 0px;
+}
+
+.tela_clientes .modal form input{
+  background-color: #1b203d;
+  border-top: none;
+  border-right: none;
+  color: white;
+  font-size: 15px;
+}
+.tela_clientes .modal form input:hover{
+  background-color: #272e55;
+  
 }
 
 .tela_clientes .modal form input#nome {
@@ -123,9 +134,9 @@
 
 .tela_clientes .modal form ul.botao #gravarcliente {
   position: absolute;
-  border-radius: 5px;
+  border-radius: 10px;
   color: white;
-  background: #1b203d;
+  background: #272e55;
   text-decoration: none;
   border-color: #1b203d;
   width: 70px;
@@ -135,11 +146,7 @@
   bottom: 0;
   cursor: pointer;
   padding: 5px;
-  margin: 5px;
-}
-
-.tela_clientes .modal form ul.botao #gravarcliente:hover {
-  background: #272e55;
+  margin: 15px;
 }
 
 .tela_clientes .modal form ul.botao #gravarcliente i {
