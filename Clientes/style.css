@@ -14,7 +14,7 @@
 
 .tela_clientes .botoes a:hover {
   color: #f1f1f1;
-  background-color: #313863;
+  background-color: #342e42;
 }
 
 .tela_clientes .botoes a i {
@@ -31,13 +31,13 @@
 /**Cor quando passar por cima**/
 
 #tabelaCliente td:hover {
-  background-color: #3e3769;
+  background-color: #342e42;
 }
 
 /**Cor quando selecionado**/
 
 #tabelaCliente tr.selecionado td {
-  background-color: #3e3769;
+  background-color: #342e42;
 }
 
 /* TELA MODAL DE CADASTRO E EDIÇÃO */
@@ -66,17 +66,12 @@
   width: 40px;
   height: 40px;
   margin: 3px;
-  border: 1px solid #1b203d;
   border-radius: 40%;
+  border: none;
   color: white;
-  background: #1b203d;
+  background: #3d3255;
   font-size: 18px;
   cursor: pointer;
-  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .3);
-}
-
-.tela_clientes .fechar:hover {
-  background: #272e55;
 }
 
 .tela_clientes .subtitulo {
@@ -84,7 +79,7 @@
 }
 
 .tela_clientes .modal {
-  background-color: #1b203d;
+  background-color: #201b2c;
   position: relative;
   width: 630px;
   height: 220px;
@@ -105,15 +100,12 @@
 }
 
 .tela_clientes .modal form input{
-  background-color: #1b203d;
-  border-top: none;
-  border-right: none;
+  background-color: #201b2c;
+  border: none;
+  border-bottom: 1px solid;
   color: white;
   font-size: 15px;
-}
-.tela_clientes .modal form input:hover{
-  background-color: #272e55;
-  
+  outline: none;
 }
 
 .tela_clientes .modal form input#nome {
@@ -136,9 +128,8 @@
   position: absolute;
   border-radius: 10px;
   color: white;
-  background: #272e55;
+  background: #3d3255;
   text-decoration: none;
-  border-color: #1b203d;
   width: 70px;
   height: 20px;
   font-size: 15px;
