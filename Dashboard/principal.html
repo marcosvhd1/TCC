@@ -22,7 +22,8 @@
 		<a href="#" class="icon-a" onclick="openProduto()"><i class="fa fa-archive icons"></i> <span>Produtos</span></a>
 		<a href="#" class="icon-a" onclick="openVenda()"><i class="fa fa-shopping-bag icons"></i>
 			<span>Vendas</span></a>
-		<a href="#" class="icon-a" onclick="openFinanceiro()"><i class="fa fa-money icons"></i> <span>Financeiro</span></a>
+		<a href="#" class="icon-a" onclick="openFinanceiro()"><i class="fa fa-money icons"></i>
+			<span>Financeiro</span></a>
 	</div>
 	<div id="main">
 		<div class="head">
@@ -113,27 +114,28 @@
 				<table id="tabelaCliente">
 					<thead>
 						<tr>
-							<th>Código</th>
-							<th>Nome</th>
-							<th>E-mail</th>
-							<th>Telefone</th>
-							<th>Cidade</th>
+							<th>CÓDIGO</th>
+							<th>NOME</th>
+							<th>CPF/CNPJ</th>
+							<th>TELEFONE</th>
+							<th>UF</th>
+							<th>CIDADE</th>
+							<th>ENDEREÇO</th>
+							<th>BAIRRO</th>
+							<th>NÚMERO</th>
 						</tr>
 					</thead>
 					<tbody>
 						<tr>
 							<td>00001</td>
 							<td>Marcos Vinicius Hellmann Delfino</td>
-							<td>marcosvhd1@gmail.com</td>
+							<td>102.527.459-81</td>
 							<td>(48) 99635-1582</td>
-							<td>Armazém</td>
-						</tr>
-						<tr>
-							<td>00002</td>
-							<td>Diego Estevam da Rosa</td>
-							<td>diego@gmail.com</td>
-							<td>(48) 99635-1582</td>
-							<td>Jaguaruna</td>
+							<td>SC</td>
+							<td>Tubarão</td>
+							<td>AV. Paulo Coelho</td>
+							<td>Revoredo</td>
+							<td>1036</td>
 						</tr>
 					</tbody>
 				</table>
@@ -144,22 +146,38 @@
 					<button class="fechar" id="fechar-modal-cliente">x</button>
 					<h2 class="subtitulo">Clientes</h2>
 					<form>
-						<li>
+						<li class="cad-cliente">
 							<ul class="fields">
 								<label>Nome:</label>
-								<input type="text" id="nome" class="input" required>
-								<label>Telefone:</label>
-								<input type="text" id="telefone" class="input">
+								<input type="text" id="nome" class="input" required style="width: 300px;">
+								<label style="margin-top: 15px;">CPF/CPNJ:</label>
+								<input type="text" id="cpf" class="input" style="width: 150px;">
+								<label style="margin-top: 15px;">Data Nasc.:</label>
+								<input type="date" id="nasc" class="input" style="width: 150px;">
+								<label style="margin-top: 15px;">Telefone:</label>
+								<input type="text" id="telefone" class="input" style="width: 120px;">
+								<label style="margin-top: 15px;">E-mail:</label>
+								<input type="text" id="email" class="input" style="width: 150px;">
+								<label style="margin-top: 15px;">Obs:</label>
+								<input type="text" id="obs" class="input" style="width: 300px;">
 							</ul>
-							<ul class="fields">
-								<label>E-mail:</label>
-								<input type="text" id="email" class="input">
-								<label>Cidade:</label>
-								<input type="text" id="cidade" class="input">
+							<ul class="fields" style="margin-left: 80px;">
+								<label>UF:</label>
+								<input type="text" id="uf" class="input" style="width: 40px;">
+								<label style="margin-top: 15px;">Cidade:</label>
+								<input type="text" id="cidade" class="input" style="width: 120px;">
+								<label style="margin-top: 15px;">CEP:</label>
+								<input type="text" id="cep" class="input" style="width: 120px;">
+								<label style="margin-top: 15px;">Endereço:</label>
+								<input type="text" id="endereco" class="input" style="width: 270px;">
+								<label style="margin-top: 15px;">Bairro:</label>
+								<input type="text" id="bairro" class="input" style="width: 150px;">
+								<label style="margin-top: 15px;">Número:</label>
+								<input type="number" id="numero" class="input" style="width: 50px;">
 							</ul>
 							<ul class="botao">
 								<a href="#" class="button" id="gravarcliente"><i class="fa fa-check"
-										aria-hidden="true"></i>Gravar</a>
+										aria-hidden="true"></i>Salvar</a>
 							</ul>
 						</li>
 					</form>

@@ -81,17 +81,18 @@
 .tela_clientes .modal {
   background-color: #201b2c;
   position: relative;
-  width: 630px;
-  height: 220px;
+  width: 770px;
+  height: 470px;
   animation: modal 0.7s;
   border-radius: 20px;
 }
 
 .tela_clientes .modal form label {
   color: white;
-  font-size: 19px;
+  font-size: 15px;
   font-weight: 700;
   margin-right: 5px;
+  margin-top: 15px;
 }
 
 .tela_clientes .modal form li {
@@ -106,22 +107,6 @@
   color: white;
   font-size: 15px;
   outline: none;
-}
-
-.tela_clientes .modal form input#nome {
-  width: 250px;
-  margin-right: 25px;
-}
-.tela_clientes .modal form input#telefone {
-  width: 95px;
-}
-.tela_clientes .modal form input#email {
-  width: 200px;
-  margin-right: 25px;
-  margin-top: 25px;
-}
-.tela_clientes .modal form input#cidade {
-  width: 160px;
 }
 
 .tela_clientes .modal form ul.botao #gravarcliente {
@@ -153,4 +138,13 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+li.cad-cliente {
+  display: flex;
+}
+
+li.cad-cliente .fields{
+  display: flex;
+  flex-direction: column;
 }
