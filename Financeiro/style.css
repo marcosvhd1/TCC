@@ -1,0 +1,150 @@
+.tela_financeiro {
+  display: none;
+}
+
+.tela_financeiro .botoes a {
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  color: #f1f1f1;
+  transition: 0.3s;
+  padding: 10px;
+  margin-left: 10px;
+}
+
+.tela_financeiro .botoes a:hover {
+  color: #f1f1f1;
+  background-color: #342e42;
+}
+
+.tela_financeiro .botoes a i {
+  margin-right: 10px;
+}
+
+/* TABELA ************************ */
+
+#tabelafinanceiro tr td {
+  cursor: pointer;
+  /**importante para não mostrar cursor de texto**/
+}
+
+/**Cor quando passar por cima**/
+
+#tabelafinanceiro td:hover {
+  background-color: #342e42;
+}
+
+/**Cor quando selecionado**/
+
+#tabelafinanceiro tr.selecionado td {
+  background-color: #342e42;
+}
+
+/* TELA MODAL DE CADASTRO E EDIÇÃO */
+
+.tela_financeiro .modal-container {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.tela_financeiro .modal-container.mostrar {
+  display: flex;
+}
+
+.tela_financeiro .fechar {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 40px;
+  height: 40px;
+  margin: 3px;
+  border-radius: 40%;
+  border: none;
+  color: white;
+  background: #3d3255;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.tela_financeiro .subtitulo {
+  color: white;
+}
+
+.tela_financeiro .modal {
+  background-color: #201b2c;
+  position: relative;
+  width: 770px;
+  height: 470px;
+  animation: modal 0.7s;
+  border-radius: 20px;
+}
+
+.tela_financeiro .modal form label {
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  margin-right: 5px;
+  margin-top: 15px;
+}
+
+.tela_financeiro .modal form li {
+  text-decoration: none;
+  font-size: 0px;
+}
+
+.tela_financeiro .modal form input{
+  background-color: #201b2c;
+  border: none;
+  border-bottom: 1px solid;
+  color: white;
+  font-size: 15px;
+  outline: none;
+}
+
+.tela_financeiro .modal form ul.botao #gravarfinanceiro {
+  position: absolute;
+  border-radius: 10px;
+  color: white;
+  background: #3d3255;
+  text-decoration: none;
+  width: 70px;
+  height: 20px;
+  font-size: 15px;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  padding: 5px;
+  margin: 15px;
+}
+
+.tela_financeiro .modal form ul.botao #gravarfinanceiro i {
+  margin-right: 5px;
+  margin-left: 2px;
+}
+
+@keyframes modal {
+  from{
+    opacity: 0;
+    transform: translateY(-50%);
+  }to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+li.cad-financeiro {
+  display: flex;
+}
+
+li.cad-financeiro .fields{
+  display: flex;
+  flex-direction: column;
+}

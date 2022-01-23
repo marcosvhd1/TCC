@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="../Clientes/style.css" type="text/css">
 	<link rel="stylesheet" href="../Produtos/style.css" type="text/css">
 	<link rel="stylesheet" href="../Vendas/style.css" type="text/css">
+	<link rel="stylesheet" href="../Financeiro/style.css" type="text/css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 
@@ -408,12 +409,59 @@
 				</div>
 			</div>
 		</div>
+		<div class="tela_financeiro" id="Financeiro">
+			<h2>Financeiro</h2>
+			<div class="clearfix">
+				<div class="botoes">
+					<a href="#" id="cadfinanceiro"><i class="fa fa-plus" aria-hidden="true"></i>Cadastrar</a>
+					<a href="#" id="editfinanceiro"><i class="fa fa-pencil" aria-hidden="true"></i>Editar</a>
+					<a href="#" id="excluirfinanceiro"><i class="fa fa-trash" aria-hidden="true"></i>Excluir</a>
+				</div>
+				<br>
+				<table id="tabelafinanceiro">
+					<thead>
+						<tr>
+							<th>CÓDIGO</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<!-- FORM DE CADASTRO DO CLIENTE -->
+			<div id="modal-financeiro" class="modal-container">
+				<div class="modal">
+					<button class="fechar" id="fechar-modal-financeiro">x</button>
+					<h2 class="subtitulo">Financeiro</h2>
+					<form>
+						<li class="cad-financeiro">
+							<ul class="fields">
+								<label>Nome:</label>
+								<input type="text" id="nome" class="input" required style="width: 300px;">
+							</ul>
+							<ul class="fields" style="margin-left: 80px;">
+								<label>UF:</label>
+								<input type="text" id="uf" class="input" style="width: 40px;">
+							</ul>
+							<ul class="botao">
+								<a href="#" class="button" id="gravarfinanceiro"><i class="fa fa-check"
+										aria-hidden="true"></i>Salvar</a>
+							</ul>
+						</li>
+					</form>
+				</div>
+			</div>
+		</div>
 	</div>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="../Dashboard/script.js"></script>
 	<script src="../Clientes/script.js"></script>
 	<script src="../Produtos/script.js"></script>
 	<script src="../Vendas/script.js"></script>
+	<script src="../Financeiro/script.js"></script>
 
 	<!-- BARRA LATERAL -->
 	<script>
